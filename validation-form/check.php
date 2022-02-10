@@ -18,6 +18,8 @@
 		exit();
 	}
 
+	$pass = md5($pass. "gkjdfkgj/dkfgj"); // кеширование пароля
+
 	$mysql = new mysqli('localhost', 'root', '', 'register-bd');
 	$mysql->query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");
 	$mysql->close();
