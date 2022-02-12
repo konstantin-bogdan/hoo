@@ -7,11 +7,13 @@
 
 	//var_dump($_POST);
 
-	$mysql = new mysqli('localhost', 'root', '', 'register-bd');
+ 	require "connect.php";
+
+	//$mysql = new mysqli('localhost', 'root', '', 'register-bd');
 
 	$query = "SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'";
 
-	//var_dump($query);
+	var_dump($query);
 
 	$result = $mysql->query($query);
 
@@ -19,7 +21,7 @@
 
 	$mysql->close();
 
-	//var_dump($user);
+	//count($user);
 
 	if (!$user) {
 		echo "Такого користувача не знайдено";

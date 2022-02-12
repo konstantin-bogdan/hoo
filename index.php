@@ -14,7 +14,7 @@
 <body>
 <div class="container mt-4">
         <?php
-            if($_COOKIE['user'] == ''):
+            if( $_COOKIE['user'] == ''):
         ?>
 
     <p class="row">
@@ -40,12 +40,12 @@
             </form>
         </div>
          <?php else: ?>
-    <p>Привіт <?= $_COOKIE['user'] ?> . Щоб вийти натисніть  <a href="http://localhost/hoo/exit.php">тут</a> . </p>
+                <p>Привіт <?= $_COOKIE['user'] ?> . Щоб вийти натисніть  <a href="http://localhost/hoo/exit.php">тут</a> . </p>
 
 
 
 
-        <?php endif; ?>
+	    <?php endif; ?>
     </div>
 
 </body>
