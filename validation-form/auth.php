@@ -5,13 +5,13 @@
 
 	$pass = md5($pass . "gkjdfkgj/dkfgj"); // кеширование пароля
 
-	var_dump($_POST);
+	//var_dump($_POST);
 
 	$mysql = new mysqli('localhost', 'root', '', 'register-bd');
 
 	$query = "SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'";
 
-	var_dump($query);
+	//var_dump($query);
 
 	$result = $mysql->query($query);
 
@@ -19,7 +19,7 @@
 
 	$mysql->close();
 
-	var_dump($user);
+	//var_dump($user);
 
 	if (!$user) {
 		echo "Такого користувача не знайдено";
@@ -35,7 +35,7 @@
 
 
 
-	//header('Location: index.html ');
+	header('Location: http://localhost/hoo/index.php');
 
 
 

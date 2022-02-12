@@ -13,7 +13,11 @@
 </head>
 <body>
 <div class="container mt-4">
-    <div class="row">
+        <?php
+            if($_COOKIE['user'] == ''):
+        ?>
+
+    <p class="row">
         <div class="col">
 
             <h1>Форма реєстрації </h1>
@@ -35,6 +39,13 @@
 
             </form>
         </div>
+         <?php else: ?>
+    <p>Привіт <?= $_COOKIE['user'] ?> . Щоб вийти натисніть  <a href="http://localhost/hoo/exit.php">тут</a> . </p>
+
+
+
+
+        <?php endif; ?>
     </div>
 
 </body>

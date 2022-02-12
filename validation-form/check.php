@@ -24,6 +24,6 @@
 	$mysql->query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");
 	$mysql->close();
 
-	 header('Location: index.html ');
+	 header('Location:http://localhost/hoo/index.php ');
 
 ?>
