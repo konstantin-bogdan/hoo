@@ -5,11 +5,10 @@
 
 	$pass = md5($pass . "gkjdfkgj/dkfgj"); // кеширование пароля
 
-	//var_dump($_POST);
+	var_dump($_POST);
 
- 	require "connect.php";
 
-	//$mysql = new mysqli('localhost', 'root', '', 'register-bd');
+	$mysql = new mysqli('localhost', 'root', '', 'register-bd');
 
 	$query = "SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'";
 
