@@ -15,7 +15,7 @@
  	die("Connection failed : " . mysqli_connect_error());
 
  }
- 	echo "Connection successfuly";
+ 	echo "Connection successfully";
  	mysqli_close ($conn);
 
 
